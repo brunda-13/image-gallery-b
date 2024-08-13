@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="view-image">
+        <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.15.54_51aa86a1.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.15.54_a0e6ee85.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.16.27_33dbd6f3.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.16.28_848c483f.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.16.28_6becd63a.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.24.54_32bc1092.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.24.53_ed145755.jpg" alt="">
+        <img src="C:\Users\dellu\Pictures\WhatsApp Image 2024-07-30 at 19.24.54_9debd854.jpg" alt="">
+    
+    </div>
+</body>
+<script>
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    for(let image of images){
+        image.addEventListener("click",function(e){
+            console.log(e);
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src;
+        })
+    }
+    closeBtn.addEventListener('click',function(){
+        viewImage.style.display = "none";
+    })
+</script>
+</html>
